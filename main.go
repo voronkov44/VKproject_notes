@@ -28,7 +28,7 @@ func index(w http.ResponseWriter, r *http.Request) {
 	}
 
 	//Подключение к базе данных
-	db, err := sql.Open("mysql", "root:root@tcp(127.0.0.1:3306)/golang")
+	db, err := sql.Open("mysql", "root:root@tcp(mariadb:3306)/golang")
 	if err != nil {
 		panic(err)
 	}
@@ -81,7 +81,7 @@ func save_article(w http.ResponseWriter, r *http.Request) {
 	} else {
 
 		//Подключение к базе данных
-		db, err := sql.Open("mysql", "root:root@tcp(127.0.0.1:3306)/golang")
+		db, err := sql.Open("mysql", "root:root@tcp(mariadb:3306)/golang")
 		if err != nil {
 			panic(err)
 		}
@@ -108,7 +108,7 @@ func show_post(w http.ResponseWriter, r *http.Request) {
 		fmt.Fprintf(w, err.Error())
 	}
 
-	db, err := sql.Open("mysql", "root:root@tcp(127.0.0.1:3306)/golang")
+	db, err := sql.Open("mysql", "root:root@tcp(mariadb:3306)/golang")
 	if err != nil {
 		panic(err)
 	}
@@ -174,7 +174,7 @@ func save_users(w http.ResponseWriter, r *http.Request) {
 	} else {
 
 		//Подключение к базе данных
-		db, err := sql.Open("mysql", "root:root@tcp(127.0.0.1:3306)/golang")
+		db, err := sql.Open("mysql", "root:root@tcp(mariadb:3306)/golang")
 		if err != nil {
 			panic(err)
 		}
@@ -206,7 +206,7 @@ func save_users(w http.ResponseWriter, r *http.Request) {
 
 func examination(w http.ResponseWriter, r *http.Request) {
 
-	db, err := sql.Open("mysql", "root:root@tcp(127.0.0.1:3306)/golang")
+	db, err := sql.Open("mysql", "root:root@tcp(mariadb:3306)/golang")
 	if err != nil {
 		panic(err)
 	}
@@ -252,7 +252,7 @@ func index2(w http.ResponseWriter, r *http.Request) {
 	}
 
 	//Подключение к базе данных
-	db, err := sql.Open("mysql", "root:root@tcp(127.0.0.1:3306)/golang")
+	db, err := sql.Open("mysql", "root:root@tcp(mariadb:3306)/golang")
 	if err != nil {
 		panic(err)
 	}
