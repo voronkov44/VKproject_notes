@@ -301,7 +301,7 @@ func handleFunc() {
 	rtr.HandleFunc("/index2", index2).Methods("GET")
 
 	http.Handle("/", rtr)
-	http.ListenAndServe("localhost:8080", nil)
+	http.ListenAndServe("0.0.0.0:8080", nil)
 }
 
 func main() {
